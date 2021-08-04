@@ -35,8 +35,8 @@
 ### `Q2` Present both an advantage and a disadvantage of dynamic linking programs over static linking.
 
 >**`Answer`** 
->***vantagem: uma vantagem seria o fato de que os programas de linkagem dinâmica conseguem partilhar o mesmo espaço de código, não havendo de alterar uma mesma função diversas vezes no código toda vez que necessitar de uma atualização.***
->***desvantagem: por outro lado, a desvantagem seria a quantidade de vezes que esse programa deverá acessar esse espaço partilhado, o que pode afetar a performance.***
+* >***vantagem: uma vantagem seria o fato de que os programas de linkagem dinâmica conseguem partilhar o mesmo espaço de código, não havendo de alterar uma mesma função diversas vezes no código toda vez que necessitar de uma atualização.***
+* >***desvantagem: por outro lado, a desvantagem seria a quantidade de vezes que esse programa deverá acessar esse espaço partilhado, o que pode afetar a performance.***
 
 *** 
 
@@ -59,8 +59,8 @@
 
 ### `Q5` What are "command line arguments" and "environment variables"?
 >**`Answer`**
->***command line arguments: é um parâmetro que fornece ao programa na main function os argumentos que o utilizador deve passar para que o programa funcione adequadamente.***
->***environment variables: são informaçãos partilhadas pelos vários programas da máquina e que são alteradas raramente.*** 
+* >***command line arguments: é um parâmetro que fornece ao programa na main function os argumentos que o utilizador deve passar para que o programa funcione adequadamente.***
+* >***environment variables: são informaçãos partilhadas pelos vários programas da máquina e que são alteradas raramente.*** 
 
 #### `a` Write a program that outputs to the screen its command line arguments and the name and value of all the shell's environment variables.
 >**`Answer`** 
@@ -97,10 +97,10 @@
 ### `Q8` Based on the output of the command ps aux say if Linux is
 
 >**`Answer`** 
->- [ ] ==**multi-programming**==
->- [ ] ==**multi-user**==
->- [ ] ==**time sharing**==
->- [ ] ==**(cannot say just by the output)***==
+>- [ ] **multi-programming**
+>- [ ] **multi-user**
+>- [ ] **time sharing**
+>- [ ] **(cannot say just by the output)***
 
 *** 
 
