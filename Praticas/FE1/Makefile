@@ -1,4 +1,4 @@
-QUESTIONS: 1b 3 5a
+QUESTIONS: 1b 3 5a 5b
 
 all: $(QUESTIONS)
 
@@ -11,6 +11,8 @@ all: $(QUESTIONS)
 5a: 5a.c
 	cc 5a.c -Wall -o 5a
 
+5b: 5b.c
+	cc 5b.c -Wall -o 5b
 .PHONY: clean
 
 clean:
