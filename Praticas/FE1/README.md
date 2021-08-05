@@ -10,7 +10,7 @@
 - [x] `Q5`
 - [ ] `Q6`
 - [ ] `Q7`
-- [ ] `Q8`
+- [x] `Q8`
 - [ ] `Q9`
 - [ ] `Q10`
 - [ ] `Q11`
@@ -97,9 +97,9 @@
 ### `Q8` Based on the output of the command ps aux say if Linux is
 
 >**`Answer`** 
->- [ ] **multi-programming**
->- [ ] **multi-user**
->- [ ] **time sharing**
+>- [x] **multi-programming**
+>- [x] **multi-user**
+>- [x] **time sharing**
 >- [ ] **(cannot say just by the output)***
 
 *** 
