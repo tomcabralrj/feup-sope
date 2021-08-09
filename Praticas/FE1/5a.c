@@ -5,7 +5,9 @@ int main(int argc, char *argv[ ], char *envp[ ]){
     printf("Command line arguments:\n");
     for(int i=1; i<argc; i++){
         printf("%s\n", argv[i]);
+        
     }
+    printf("argc: %d\n", argc);
 
     printf("Enviroment arguments:\n");
     for (char **env = envp; *env != 0; env++)
