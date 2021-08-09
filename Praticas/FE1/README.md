@@ -7,10 +7,10 @@
 - [x] `Q2`
 - [x] `Q3`
 - [ ] `Q4*`
-- [x] ==`Q5`==
+- [x] `Q5`
 - [ ] `Q6`
 - [ ] `Q7`
-- [ ] `Q8`
+- [x] `Q8`
 - [ ] `Q9`
 - [ ] `Q10`
 - [ ] `Q11`
@@ -25,18 +25,18 @@
 >**`Answer`** ***Não, o make, como um interpretador, pode ser usado para qualquer linguagem e em qualquer sistema operativo desde que haja uso de compilador apropriado para tal linguagem.***
 #### `b` The compilation lines of the makefile used in the "Interesting examples of compilations" have the option -Wall. Write a simple program that shows the importance of using that compiler option.?
 >**`Answer`** ***A importância da flag -Wall é demonstrar variáveis e funções criadas no programa que não foram utilizadas.***
->**==arquivos:==** ***[`1b.c`](https://github.com/tomcabralrj/feup-sope/blob/notes1/Praticas/FE1/1b.c)***
+>**arquivos:** ***[`1b.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/1b.c)***
 #### `c` Prepare a makefile for easing the compilation of the programs suggested in this Exercise Sheet.
 >**`Answer`** 
->**==arquivos:==** ***[`Makefile`](https://github.com/tomcabralrj/feup-sope/blob/notes1/Praticas/FE1/Makefile)***
+>**arquivos:** ***[`Makefile`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/Makefile)***
 
 ***
 
 ### `Q2` Present both an advantage and a disadvantage of dynamic linking programs over static linking.
 
 >**`Answer`** 
->***==vantagem:== uma vantagem seria o fato de que os programas de linkagem dinâmica conseguem partilhar o mesmo espaço de código, não havendo de alterar uma mesma função diversas vezes no código toda vez que necessitar de uma atualização.***
->***==desvantagem:== por outro lado, a desvantagem seria a quantidade de vezes que esse programa deverá acessar esse espaço partilhado, o que pode afetar a performance.***
+* >***vantagem: uma vantagem seria o fato de que os programas de linkagem dinâmica conseguem partilhar o mesmo espaço de código, não havendo de alterar uma mesma função diversas vezes no código toda vez que necessitar de uma atualização.***
+* >***desvantagem: por outro lado, a desvantagem seria a quantidade de vezes que esse programa deverá acessar esse espaço partilhado, o que pode afetar a performance.***
 
 *** 
 
@@ -47,7 +47,7 @@
 
 #### `b` Try it with a slightly adapted code presented in the man's EXAMPLE section.
 >**`Answer`** 
->**==arquivos:==** ***[`3.c`](https://github.com/tomcabralrj/feup-sope/blob/notes1/Praticas/FE1/3.c)***
+>**arquivos:** ***[`3.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/3.c)***
 
 ***
 
@@ -59,16 +59,16 @@
 
 ### `Q5` What are "command line arguments" and "environment variables"?
 >**`Answer`**
->***==command line arguments:== é um parâmetro que fornece ao programa na main function os argumentos que o utilizador deve passar para que o programa funcione adequadamente.***
->***==environment variables:== são informaçãos partilhadas pelos vários programas da máquina e que são alteradas raramente.*** 
+* >***command line arguments: é um parâmetro que fornece ao programa na main function os argumentos que o utilizador deve passar para que o programa funcione adequadamente.***
+* >***environment variables: são informaçãos partilhadas pelos vários programas da máquina e que são alteradas raramente.*** 
 
 #### `a` Write a program that outputs to the screen its command line arguments and the name and value of all the shell's environment variables.
 >**`Answer`** 
->**==arquivos:==** ***[`5a.c`](https://github.com/tomcabralrj/feup-sope/blob/notes1/Praticas/FE1/5a.c)***
+>**arquivos:** ***[`5a.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/5a.c)***
 
 #### `b` Change the program so that its output is just the value of the environment variables whose names are passed as arguments (e.g. prog PATH HOME would show the values of PATH and HOME). Confirm that the values output are correct using the shell commands echo and printenv.
 >**`Answer`** 
->**==arquivos:==** ***[`5b.c`](https://github.com/tomcabralrj/feup-sope/blob/notes1/Praticas/FE1/5b.c)***
+>**arquivos:** ***[`5b.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/5b.c)***
 
 #### `c` From the command line create a new environment variable, DIR1, with value 123-testing and use the program you wrote in b. to confirm the existence and value of DIR1.
 >**`Answer`** 
@@ -97,10 +97,10 @@
 ### `Q8` Based on the output of the command ps aux say if Linux is
 
 >**`Answer`** 
->- [ ] ==**multi-programming**==
->- [ ] ==**multi-user**==
->- [ ] ==**time sharing**==
->- [ ] ==**(cannot say just by the output)***==
+>- [x] **multi-programming**
+>- [x] **multi-user**
+>- [x] **time sharing**
+>- [ ] **(cannot say just by the output)***
 
 *** 
 
