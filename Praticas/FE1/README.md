@@ -8,13 +8,13 @@
 - [x] `Q3`
 - [ ] `Q4*`
 - [x] `Q5`
-- [ ] `Q6`
-- [ ] `Q7`
+- [x] `Q6`
+- [x] `Q7`
 - [x] `Q8`
-- [ ] `Q9`
-- [ ] `Q10`
-- [ ] `Q11`
-- [ ] `Q12`
+- [x] `Q9`
+- [x] `Q10`
+- [x] `Q11`
+- [x] `Q12`
 
 
 ***
@@ -43,7 +43,7 @@
 ### `Q3` Study the man page of the service atexit.
 
 #### `a` Could this service be useful when a running program is suddenly terminated (e.g. by CTRL-C)?
->**`Answer` Não, pois quando se usa o CTRL-C, isso gera um sinal de terminação que mata o processo imediatamente, o que acaba por não ser um normal exit, logo a função atexit não o detecta e o programa termina imediatamente.** 
+>**`Answer`** ***Não, pois quando se usa o CTRL-C, isso gera um sinal de terminação que mata o processo imediatamente, o que acaba por não ser um normal exit, logo a função atexit não o detecta e o programa termina imediatamente.*** 
 
 #### `b` Try it with a slightly adapted code presented in the man's EXAMPLE section.
 >**`Answer`** 
@@ -77,21 +77,27 @@
 
 ### `Q6` A system call may fail; by words, exemplify that with open. (If necessary: man 2 open !)
 
+>**`Answer`** ***Algumas chamadas ao sistema podem falhar devido a informação fornecida não ser adequada. A exemplo, temos a função open, a qual falha caso a flag utilizada seja um O_RDWR e pedimos para que a função leia um arquivo não existente. No caso, deveriamos adicionar a flag O_CREAT para que o arquivo seja criado, caso não exista.***
+
 #### `a` Write a program that tries to open a file named in the command line argument and report the "open" failures without using perror. With the program prove the example of failure you gave above.
->**`Answer`** 
+>**`Answer`**
+>**arquivos:** ***[`6a.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/6a.c)***
 
 #### `b` Modify your program to ensure that failure messages are output to the standard error (stderr) and not to the standard output (stdout). Confirm your new program behavior with shell redirection. (Clue: prog > ofile 2> efile)
 >**`Answer`** 
+>**arquivos:** ***[`6b.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/6b.c)***
 
 #### `c` Repeat a. using perror. Test stdout and stderr for the output of this program.
 >**`Answer`** 
+>**arquivos:** ***[`6c.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/6c.c)***
 
 ***
 
 ### `Q7` Explain the two main functions of an operating system.
 
 >**`Answer`** 
-
+* >***Gerenciar recursos do computador, como memória, CPU, printer etc.***
+* >***Executar os serviços fornecidos pelas aplicações de software.***
 ***
 
 ### `Q8` Based on the output of the command ps aux say if Linux is
@@ -107,16 +113,17 @@
 ### `Q9` Some system operations can be performed while in user mode, others only in kernel mode.
 
 #### `a` using the date command classify, in the above respect, the read and write operations on the internal clock. (Clue: date -s "20220913")
->**`Answer`** 
+>**`Answer`** ***As operações de leitura da data pelo user mode podem ser feitas normalmente, enquanto as de escrita(que modificam a data) só podem ser feitas pelo kernel mode, sendo esse tipo de operação proibida pelo user mode.***
 
 #### `b` name one (more) operation that can only be performed in kernel mode.
->**`Answer`** 
+>**`Answer`** ***Desativar todas as interrupções e alterar o mapa da memória.***
 
 *** 
 
 ### `Q10` Write a program that outputs "Hello world!" 100 000 times and, before ending, presents the duration time of the running and of the processor usage (both in user and system modes). (Clue: "time ls -R /tmp".)
 
 >**`Answer`** 
+>**arquivos:** ***[`10.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/10.c)***
 
 *** 
 
@@ -124,10 +131,13 @@
 
 #### `a` mainly (direct) system calls, such as open;
 >**`Answer`** 
+>**arquivos:** ***[`11a.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/11a.c)***
 #### `b` mainly C library calls, such as fopen.
 >**`Answer`** 
+>**arquivos:** ***[`11b.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/11b.c)***
 #### `c` Change one of those programs so that when the 2nd argument is missing (fname2, in the example above) the content of fname1 is shown on the screen (i.e. stdout).
 >**`Answer`** 
+>**arquivos:** ***[`11c.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/11c.c)***
 
 *** 
 
@@ -135,6 +145,7 @@
 
 #### `a` Write such a program, also assuring one output line per file.
 >**`Answer`** 
+>**arquivos:** ***[`12.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE1/12.c)***
 
 #### `b` From the output of the program and using wc show the number of regular files in the directory.
 >**`Answer`** 
