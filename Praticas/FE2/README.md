@@ -3,12 +3,12 @@
 ###### tema: `Processes, threads and communication`
 
 ##### *Questões já resolvidas:*
-- [ ] `Q1`
-- [ ] `Q2`
-- [ ] `Q3`
-- [ ] `Q4`
-- [ ] `Q5`
-- [ ] `Q6`
+- [x] `Q1`
+- [x] `Q2`
+- [x] `Q3`
+- [x] `Q4`
+- [x] `Q5`
+- [x] `Q6`
 - [ ] `Q7`
 - [ ] `Q8`
 - [ ] `Q9`
@@ -24,16 +24,20 @@
 ### `Q1` Differentiate program, process and thread.
 
 >**`Answer`** 
+* >***Programa: é uma lista de instruções a serem executadas. Ou seja, é a entidade passiva.***
+* >***Processo: é onde a maquina executará o que foi dito pelo programa. Ou seja, é a entidade ativa. Há também a posse de recursos, como: endereço de espaço, variaveis globais, processos filhos etc.***
+* >***Thread: sequência de execução(program counter, registos, stack, estado), porém diferente dos processos, partilham o mesmo espaço de memória.***
+
 
 ##
 
 ### `Q2` Consider the information the operating system keeps about the activities it manages.
 
 #### `a` Present 5 relevant data items that differentiate a process from another.
->**`Answer`** 
+>**`Answer`** ***o espaço de memória, os processos filhos, o stack, file descriptors e registos.*** 
 
 #### `b` Do the same for threads.
->**`Answer`** 
+>**`Answer`** ***stack, pc counter, registos e estado***
 
 #### `c` Present the data from a. and b. in a comparative table: one row for each item; one column for process and another for thread.
 >**`Answer`** 
@@ -44,18 +48,26 @@
 
 #### `a` Take a note of the different states that are visible and try to interpret their meaning with... "man ps"!
 >**`Answer`** 
+* >***ps a - lista todos os processos com um terminal, ou todos os processos quando se usa com a opção x.***
+* >***ps x - causa ps em todos os processos em que o utilizador é o dono, ou lista todos os processos quando utlizado com a opção a.***
+* >***ps u - mostra no formato user-oriented***
 
 #### `b` With the same command (ps), eventually with new options, trace the family tree of the process that corresponds to ps, up to the "initial", root process.
->**`Answer`** 
+>**`Answer`** ***utilizar comandos como --ppid, que lista os parentes do processo selecionado***
 
 #### `c` With the pstree utility, identify a similar tree (for pstree process). (Clue: there is an option that shows the PIDs.)
->**`Answer`** 
+>**`Answer`** ***pstree -p***
 
 ## 
 
 ### `Q4*` The Process state transition Diagram presented in the lectures' slides shows the 3 main states: Running, Blocked and Ready. Update the diagram to accomodate 2 more possible states: New and Terminated.
 
->**`Answer`** 
+>**`Answer`** ***NEW -> READY 
+READY -> RUNNING
+RUNNING -> READY
+RUNNING -> BLOCKED
+BLOCKED -> READY
+RUNNING -> TERMINATED***
 
 ## 
 
@@ -68,12 +80,17 @@
 #### Could you give a similar guarantee, now having the parent write "World:" before the child writes "Hello!"?
 
 
->**`Answer`** 
+>**`Answer`** ***Não, não há qualquer garantia, caso não se utilize qualquer função que bloqueie um processo em relação ao outro, tanto pai quanto filho podem executar o processo antes ou depois, de maneira aleatória.***
+>
+>**`arquivos:`** ***[`5.c`](https://github.com/tomcabralrj/feup-sope/blob/main/Praticas/FE2/5.c)***
 
 ## 
 
 ### `Q6` Present an advantage and a disadvantage of having the architecture of a program based on processes compared with basing it on threads.
 
+>**`Answer`**
+* >***vantagem: o fato de não partilhar espaço de memória torna os processos mais independentes e seguros, ja que cada processo tem suas próprias informações resguardadas.***
+* >***desvantagem: pelo mesmo motivo, pode ser mais lento e mais complexo.***
 
 ## 
 
